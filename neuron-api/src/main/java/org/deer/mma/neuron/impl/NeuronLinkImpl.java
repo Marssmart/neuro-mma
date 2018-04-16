@@ -38,16 +38,16 @@ class NeuronLinkImpl implements NeuronLink {
   }
 
   @Override
-  public boolean equals(Object o) {
-    if (this == o) {
+  public boolean equals(Object input) {
+    if (this == input) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (input == null || getClass() != input.getClass()) {
       return false;
     }
-    NeuronLinkImpl that = (NeuronLinkImpl) o;
-    return Objects.equals(from, that.from) &&
-        Objects.equals(to, that.to);
+    NeuronLinkImpl that = (NeuronLinkImpl) input;
+    return Objects.equals(from, that.from)
+        && Objects.equals(to, that.to);
   }
 
   @Override
