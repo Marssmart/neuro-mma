@@ -7,25 +7,25 @@ import javax.annotation.Nonnull;
  */
 public interface NeuronLink {
 
-    /**
-     * Start of link
-     */
-    @Nonnull
-    Neuron from();
+  /**
+   * Start of link
+   */
+  @Nonnull
+  Neuron from();
 
-    /**
-     * End of the link
-     */
-    @Nonnull
-    Neuron to();
+  /**
+   * End of the link
+   */
+  @Nonnull
+  Neuron to();
 
-    /**
-     * Set the weight that represents how important this link is
-     */
-    void setWeight(final double weight);
+  /**
+   * Set the weight that represents how important this link is
+   */
+  void setWeight(final double weight);
 
-    /**
-     * Get the weight that represents how important this link is
-     */
-    double weight();
+  /**
+   * Get the weight that represents how important this link is
+   */
+  double weight();
 }

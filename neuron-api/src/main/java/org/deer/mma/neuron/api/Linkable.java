@@ -7,8 +7,8 @@ import javax.annotation.Nonnull;
  */
 public interface Linkable {
 
-    /**
-     * Links this to other neuron
-     */
-    void linkTo(@Nonnull final Neuron neuron);
+  /**
+   * Links this to other neuron
+   */
+  void linkTo(@Nonnull final Neuron neuron);
 }

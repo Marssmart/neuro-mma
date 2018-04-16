@@ -5,8 +5,8 @@ package org.deer.mma.neuron.api;
  */
 public interface Neuron extends Identifiable, Linkable {
 
-    /**
-     * Calculates current activation of profile
-     */
-    double activation();
+  /**
+   * Calculates current activation of profile
+   */
+  double activation();
 }
