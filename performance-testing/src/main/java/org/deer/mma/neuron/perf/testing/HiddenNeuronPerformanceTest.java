@@ -36,6 +36,11 @@ public class HiddenNeuronPerformanceTest {
 
   private HiddenNeuron mainNeuron;
 
+  /**
+   * Initializes the whole network
+   *
+   * generates L0,L1 and L2 neurons and interconnects them
+   */
   @Setup
   public void init() {
     CalculationContext ctx = emptyContext();
