@@ -1,0 +1,7 @@
+plugins:
+  sonar-java:
+    enabled: true
+  pmd:
+    enabled: true
+  checkstyle:
+    enabled: true
