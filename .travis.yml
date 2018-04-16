@@ -7,4 +7,5 @@ jobs:
     - stage: test
       script: mvn test -e
     - stage: perf test
+      if: 1 = 0 # skip the performance tests by default
       script: mvn integration-test -pl :performance-testing -e -Pperformance-benchmark
