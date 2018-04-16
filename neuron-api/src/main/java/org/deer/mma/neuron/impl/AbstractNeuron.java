@@ -56,8 +56,9 @@ public abstract class AbstractNeuron implements Neuron {
 
   @Override
   public String toString() {
-    return "AbstractNeuron{" +
-        "links=[" + links.stream()
+    return "AbstractNeuron{"
+        + "links=["
+        + links.stream()
         .limit(5)//to prevent to long logs
         .map(link -> "[" + link.from().id() + " -> " + link.to().id() + "]")
         .collect(Collectors.joining(" , "))
