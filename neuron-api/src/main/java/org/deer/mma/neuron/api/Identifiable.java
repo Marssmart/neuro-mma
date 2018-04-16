@@ -7,9 +7,9 @@ import javax.annotation.Nonnegative;
  */
 public interface Identifiable {
 
-    /**
-     * Unique id
-     */
-    @Nonnegative
-    long id();
+  /**
+   * Unique id
+   */
+  @Nonnegative
+  long id();
 }

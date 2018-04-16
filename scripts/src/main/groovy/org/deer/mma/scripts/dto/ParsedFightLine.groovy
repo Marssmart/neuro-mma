@@ -25,7 +25,7 @@ class ParsedFightLine {
         this.id = id
         this.stopageTime = stopageTime.trim()
         this.date = date.trim()
-        this.event = event.trim().replace("\"","'")
+        this.event = event.trim().replace("\"", "'")
         this.fightEnd = fightEnd.trim()
         this.fightEndType = fightEndType.trim()
         this.fighterRef = fighterRef.trim()

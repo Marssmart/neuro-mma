@@ -21,10 +21,13 @@ public class HiddenNeuron extends AbstractNeuron implements Async {
     this.context = context;
   }
 
-  private static double sigmoid(double x) {
-    return (1 / (1 + Math.pow(Math.E, (-1 * x))));
+  private static double sigmoid(double input) {
+    return (1 / (1 + Math.pow(Math.E, (-1 * input))));
   }
 
+  /**
+   * Calculates the activation of hidden neuron as a weighted sum of links
+   */
   public double activation() {
     double weightedSum = getLinks()
         .parallelStream()
