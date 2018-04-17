@@ -36,6 +36,21 @@ public class HiddenNeuronPerformanceTest {
 
   private HiddenNeuron mainNeuron;
 
+  private static CalculationContext emptyContext() {
+    return new CalculationContext() {
+      @Override
+      public double globalBias() {
+        return 0;
+      }
+
+      @Nonnull
+      @Override
+      public Optional<Double> localBias(@Nonnull Neuron neuron) {
+        return Optional.empty();
+      }
+    };
+  }
+
   /**
    * Initializes the whole network and generates L0,L1 and L2 neurons and interconnects them
    */
@@ -66,20 +81,5 @@ public class HiddenNeuronPerformanceTest {
   @Benchmark
   public void testCalculationNoWeightAdjustment(Blackhole blackhole) {
     blackhole.consume(mainNeuron.activation());
-  }
-
-  private static CalculationContext emptyContext() {
-    return new CalculationContext() {
-      @Override
-      public double globalBias() {
-        return 0;
-      }
-
-      @Nonnull
-      @Override
-      public Optional<Double> localBias(@Nonnull Neuron neuron) {
-        return Optional.empty();
-      }
-    };
   }
 }

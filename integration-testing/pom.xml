@@ -10,29 +10,47 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>neuron-input-logic</artifactId>
+  <artifactId>integration-testing</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <dependencies>
     <dependency>
+      <groupId>org.deer</groupId>
+      <artifactId>neuron-persistence-api</artifactId>
+      <version>${project.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.deer</groupId>
+      <artifactId>neuron-input-logic</artifactId>
+      <version>${project.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-entitymanager</artifactId>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.springframework.data</groupId>
       <artifactId>spring-data-jpa</artifactId>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-orm</artifactId>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-test</artifactId>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.google.code.findbugs</groupId>
       <artifactId>jsr305</artifactId>
+      <scope>test</scope>
     </dependency>
 
     <dependency>

@@ -1,4 +1,4 @@
-package org.deer.mma.neuron.persistence.jpa;
+package org.deer.mma.it.testing.common;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableJpaRepositories
 @EnableTransactionManagement
-public class TestConfig {
+public class DbTestConfig {
 
   @Bean
   public DataSource dataSource() {
@@ -31,7 +31,9 @@ public class TestConfig {
 
     LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
     factory.setJpaVendorAdapter(vendorAdapter);
-    factory.setPackagesToScan("org.deer.mma.neuron.persistence.dto");
+    factory.setPackagesToScan(
+        "org.deer.mma.neuron.persistence.dto",
+        "org.deer.mma.neuron.input.dto");
     factory.setDataSource(dataSource);
     factory.afterPropertiesSet();
 

@@ -12,7 +12,7 @@ public interface Async {
 
   /**
    * BiConsumer for CompletableFuture that reports both on success(TRACE) and failure(ERROR)
-   * */
+   */
   default <T> BiConsumer<T, Throwable> report(@Nonnull final Logger logger,
       @Nonnull final Reportable successMsg,
       @Nonnull final Reportable errorMsg) {
