@@ -53,4 +53,6 @@ public class FighterDto {
   public void setLink(String link) {
     this.link = link;
   }
+
+
 }

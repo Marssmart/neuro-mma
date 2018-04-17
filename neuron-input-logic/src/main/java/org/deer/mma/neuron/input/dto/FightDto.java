@@ -38,10 +38,10 @@ public class FightDto {
   private String fightEndType;
 
   @Column
-  private int stopageRound;
+  private int stoppageRound;
 
   @Column
-  private Time stopageTime;
+  private Time stoppageTime;
 
   public long getId() {
     return id;
@@ -91,19 +91,19 @@ public class FightDto {
     this.fightEndType = fightEndType;
   }
 
-  public int getStopageRound() {
-    return stopageRound;
+  public int getStoppageRound() {
+    return stoppageRound;
   }
 
-  public void setStopageRound(int stopageRound) {
-    this.stopageRound = stopageRound;
+  public void setStoppageRound(int stoppageRound) {
+    this.stoppageRound = stoppageRound;
   }
 
-  public Time getStopageTime() {
-    return stopageTime;
+  public Time getStoppageTime() {
+    return stoppageTime;
   }
 
-  public void setStopageTime(Time stopageTime) {
-    this.stopageTime = stopageTime;
+  public void setStoppageTime(Time stoppageTime) {
+    this.stoppageTime = stoppageTime;
   }
 }

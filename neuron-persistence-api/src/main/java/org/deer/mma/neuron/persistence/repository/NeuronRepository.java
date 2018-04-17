@@ -1,4 +1,4 @@
-package org.deer.mma.neuron.persistence.jpa;
+package org.deer.mma.neuron.persistence.repository;
 
 import org.deer.mma.neuron.persistence.dto.NeuronDto;
 import org.springframework.data.repository.PagingAndSortingRepository;
