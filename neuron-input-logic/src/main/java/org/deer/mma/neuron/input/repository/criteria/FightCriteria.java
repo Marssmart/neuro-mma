@@ -5,6 +5,9 @@ import org.springframework.data.jpa.domain.Specification;
 
 public interface FightCriteria {
 
+  /**
+   * Finds fight where fighter was either bluer or red corner
+   */
   default Specification<FightDto> fightsPerFighter(final long fighterId) {
     return (root, criteriaQuery, builder) ->
         builder.or(
