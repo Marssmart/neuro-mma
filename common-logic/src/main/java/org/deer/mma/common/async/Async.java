@@ -1,4 +1,4 @@
-package org.deer.mma.neuron.api;
+package org.deer.mma.common.async;
 
 import java.util.function.BiConsumer;
 import javax.annotation.Nonnull;

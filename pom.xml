@@ -15,6 +15,7 @@
     <module>scripts</module>
     <module>neuron-input-logic</module>
     <module>neuron-persistence-api</module>
+    <module>common-logic</module>
   </modules>
 
 
