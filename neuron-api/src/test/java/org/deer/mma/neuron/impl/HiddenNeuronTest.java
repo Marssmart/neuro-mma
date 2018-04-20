@@ -98,8 +98,14 @@ public class HiddenNeuronTest {
     try {
       hiddenNeuron.activation();
     } catch (CompletionException e) {
-      assertTrue(e.getCause() instanceof CompletionException);
-      assertTrue(e.getCause().getCause() instanceof IllegalStateException);
+      // this differs from vm to vm, i care only about the last exception really
+
+      Throwable cause = e.getCause();
+      while (cause.getCause() != null) {
+        cause = cause.getCause();// iterate to last exception in stacktrace
+      }
+      assertTrue("Should be IllegalStateException, is " + e.getCause(),
+          cause instanceof IllegalStateException);
       return;
     }
     fail();
