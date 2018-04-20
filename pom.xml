@@ -13,6 +13,8 @@
     <module>parent</module>
     <module>performance-testing</module>
     <module>scripts</module>
+    <module>neuron-input-logic</module>
+    <module>neuron-persistence-api</module>
   </modules>
 
 
