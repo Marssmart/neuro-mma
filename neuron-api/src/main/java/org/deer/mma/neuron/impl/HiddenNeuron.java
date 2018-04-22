@@ -1,11 +1,11 @@
 package org.deer.mma.neuron.impl;
 
 import static java.util.concurrent.CompletableFuture.supplyAsync;
-import static org.deer.mma.neuron.api.Async.Reportable.message;
+import static org.deer.mma.common.async.Async.Reportable.message;
 
 import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nonnull;
-import org.deer.mma.neuron.api.Async;
+import org.deer.mma.common.async.Async;
 import org.deer.mma.neuron.api.CalculationContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
